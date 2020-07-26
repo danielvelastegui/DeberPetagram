@@ -1,4 +1,4 @@
-package com.danielvelastegui.deberpetagram;
+package com.danielvelastegui.deberpetagram.contenedor;
 
 public class Mascota {
     private int foto;

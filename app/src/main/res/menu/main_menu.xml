@@ -4,8 +4,21 @@
 xmlns:android="http://schemas.android.com/apk/res/android"  >
 
 
-<item android:title="@string/opcionMenu1" />
-<item android:title="@string/opcionMenu2" />
+    <item
+        android:id="@+id/mEstrella"
+        android:orderInCategory="0"
+        android:title="@string/menu_favoritos"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_estrella"
+        />
+    <item
+        android:id="@+id/mContacto"
+        android:orderInCategory="1"
+        android:title="@string/menu_contacto" />
+    <item
+        android:id="@+id/mAcerca"
+        android:orderInCategory="2"
+        android:title="@string/menu_acerca" />
 
 
 

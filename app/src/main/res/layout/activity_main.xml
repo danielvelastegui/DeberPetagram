@@ -1,75 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/materialToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.AppCompat.Light"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:theme="@style/ThemeOverlay.AppCompat.Light">
 
-        <LinearLayout
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/mainToolBar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways">
 
-            <ImageView
-                android:layout_width="40sp"
-                android:layout_height="40sp"
-                android:src="@drawable/ic_logo"
-                android:scaleType="centerCrop"
-                android:layout_marginLeft="10sp"
-                android:layout_gravity="center_vertical"/>
+        </androidx.appcompat.widget.Toolbar>
 
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/mainToolBar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize">
-
-                <ImageButton
-                    android:id="@+id/imgFavoritos"
-                    android:layout_width="35sp"
-                    android:layout_height="35sp"
-                    android:layout_gravity="center_vertical|end"
-                    android:background="#00FFFFFF"
-                    android:onClick="abrirFavoritos"
-                    android:src="@drawable/ic_estrella" />
-
-            </androidx.appcompat.widget.Toolbar>
-
-        </LinearLayout>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            app:tabIconTint="@color/indicatorColor"
+            app:tabIndicatorColor="@color/indicatorColor" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:id="@+id/container"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="?attr/actionBarSize">
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvMascotas"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="20sp"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="25sp"
+        android:src="@drawable/ic_camera_fab"
+        app:backgroundTint="@color/colorPrimary" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="25sp"
-            android:src="@drawable/ic_camera_fab"
-            app:backgroundTint="@color/colorPrimary" />
-
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

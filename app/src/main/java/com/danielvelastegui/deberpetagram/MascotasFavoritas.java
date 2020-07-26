@@ -1,16 +1,21 @@
 package com.danielvelastegui.deberpetagram;
 
-import androidx.appcompat.app.ActionBar;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
+
+import com.danielvelastegui.deberpetagram.adapter.MascotasFavoritasAdapter;
+import com.danielvelastegui.deberpetagram.contenedor.Mascota;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 
 public class MascotasFavoritas extends AppCompatActivity {
     private Toolbar favoriteToolBar;
@@ -39,8 +44,24 @@ public class MascotasFavoritas extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
-        getMenuInflater().inflate(R.menu.main_menu, menu);
+        getMenuInflater().inflate(R.menu.favoritos_menu, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.fmContacto:
+                Intent intentContact = new Intent(MascotasFavoritas.this, Contact.class);
+                startActivity(intentContact);
+                break;
+            case R.id.fmAcerca:
+                Intent intentAbout = new Intent(MascotasFavoritas.this, About.class);
+                startActivity(intentAbout);
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     public void inicializarRVFavoritas(){

@@ -2,6 +2,21 @@
     <string name="app_name">Petagram</string>
     <string name="nombreCV">Nombre Mascota</string>
     <string name="meGustasCV">#</string>
-    <string name="opcionMenu1">Ayuda</string>
-    <string name="opcionMenu2">Salir</string>
+    <string name="menu_contacto">Contacto</string>
+    <string name="menu_acerca">Acerca de</string>
+    <string name="menu_favoritos">Favoritos</string>
+    <string name="contact_nombre">Nombre Completo</string>
+    <string name="contact_email">E-mail</string>
+    <string name="contact_mensaje">Mensaje</string>
+    <string name="error">Este campo no puede estar vacio</string>
+    <string name="emailInvalido">Ingrese un correo valido</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="contact_enviar">Enviar Comentario</string>
+    <string name="nombre_autor">Daniel Velastegui</string>
+    <string name="pais_autor">Pais: Ecuador</string>
+    <string name="acerca_de">Acerca de</string>
+    <string name="contact">Contactanos</string>
+    <string name="javamailsuccess">Mensaje Enviado</string>
+    <string name="javamail_sending">Enviando Mensaje</string>
 </resources>
